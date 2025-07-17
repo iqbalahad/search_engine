@@ -55,3 +55,28 @@ Or an ad-hoc query:
 ```bash
 python src/cli.py search --query "information retrieval"
 ```
+
+## Project structure
+
+```text
+search_engine/
+├── configs/
+│   └── config.yaml                 # preprocessing & path settings
+├── data/
+│   ├── collectionand_queries.tar.gz
+│   └── index/                      # final index files live here
+│       ├── dict_final.tsv
+│       ├── postings_final.bin
+├── src/
+│   ├── cli.py                      # command-line interface (build / search)
+│   ├── main.py                     # tiny demo script with sample queries
+│   ├── ir_entrypoint.py            # ← IR_main(index_path, query)
+│   ├── search/
+│   │   └── boolean_retrieval.py    # Boolean AND retrieval logic
+│   └── index/
+│       ├── build_index.py          # builds block indexes
+│       ├── merge_indexes.py        # merges blocks → final index
+│       └── inverted_index.py       # index reader
+├── requirements.txt                # Python dependencies
+├── .gitignore                      # excludes big index files, venv, etc.
+└── README.md                       # this file
