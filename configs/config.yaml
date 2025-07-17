@@ -1,0 +1,18 @@
+
+preprocessing:
+  lowercase: true
+  remove_stop: true
+  stem: true
+
+index:
+  batch_size: 50000
+  memory_limit_mb: 400
+
+bm25:
+  k1: 1.5
+  b: 0.75
+
+paths:
+  data_tar: data/collectionandqueries.tar.gz
+  index_dir: data/index
+  forward_index: data/forward.idx

@@ -1,0 +1,7 @@
+
+flask
+nltk
+pyyaml
+matplotlib
+numpy
+pandas
