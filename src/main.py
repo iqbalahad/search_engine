@@ -1,7 +1,6 @@
 import sys
 import os
 
-# Pfad zur Projektwurzel sicherstellen
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from src.ir_entrypoint import IR_main
